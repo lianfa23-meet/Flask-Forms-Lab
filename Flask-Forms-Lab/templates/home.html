@@ -12,14 +12,14 @@
 <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for names.." title="Type in a name">
 
 <ul id="myUL">
-  <li><a href="#">Adele</a></li>
-  <li><a href="#">Agnes</a></li>
-  <li><a href="#">Billy</a></li>
-  <li><a href="#">Bob</a></li>
-  <li><a href="#">Calvin</a></li>
-  <li><a href="#">Christina</a></li>
-  <li><a href="#">Cindy</a></li>
-  <li><a href="#">Loai</a></li>
+  {%for friend in friends %}
+  <li><a href="/friend_exists/{{friend}}" taget='_blank'>{{friend}}</a></li>
+  {% endfor %}
+</ul>
+<ul>
+  {%for friend in friends %}
+  <li><a href="https://www.google.com/search?q={{friend}}&sxsrf=ALiCzsYfUQCW_KeBs7RwQEFiJOvZwgkStw%3A1658917225602&ei=aRHhYvqZJJHO7_UPwde9wAU&ved=0ahUKEwi68sWf7Jj5AhUR57sIHcFrD1gQ4dUDCA4&uact=5&oq=layan&gs_lcp=Cgdnd3Mtd2l6EAMyBAgjECcyCwguEMcBEK8BEMsBMgsILhDHARCvARDLATIFCAAQywEyBQgAEIAEMgUIABDLATILCC4QxwEQrwEQywEyCggAEIAEEIcCEBQyBQgAEJECMgoIABCABBCHAhAUOgcIABBHELADOgQIABBDOgsIABCABBCxAxCDAToOCC4QsQMQgwEQxwEQ0QM6CAgAELEDEIMBOhEILhCABBCxAxCDARDHARDRAzoRCC4QgAQQsQMQxwEQ0QMQ1AI6CggAELEDEIMBEEM6BQgAELEDOgsILhCABBDHARCvAToICC4QgAQQsQM6CAguEIAEENQCOgUILhCxAzoICAAQgAQQsQM6BQguEIAEOgYIABAeEBY6BQgAEIYDOgcIIxCwAhAnOgcIIxDqAhAnOggILhDUAhCRAjoQCC4QsQMQgwEQxwEQ0QMQQzoLCC4QsQMQgwEQ1AI6CwguEIAEELEDEIMBOg4ILhCABBCxAxCDARDUAjoHCAAQgAQQCkoECEEYAEoECEYYAFDGCVj6bGDabmgocAB4AoAB2gGIAdsukgEGMC4zNi40mAEAoAEBsAEKyAEIuAEDwAEB&sclient=gws-wiz" target='_blank'>{{friend}}</a></li>
+  {% endfor %}
 </ul>
 
 <script>
